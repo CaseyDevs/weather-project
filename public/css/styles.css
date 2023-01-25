@@ -1,0 +1,430 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)),
+        url('../images/162022-artwork-sakura-tree-alone-isolation-minimalism-white.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navbar */
+
+header {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 25px;
+    list-style: none;
+    gap: 200px;
+}
+
+li {
+    display: inline;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    font-size: 1.8rem;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+
+/* Main Content */
+
+.main-container {
+    margin-top: 30px;
+}
+
+fieldset {
+    border: none;
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 4rem;
+    color: #ffffff;
+    letter-spacing: 0.1cm;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.city-input {
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 50%;
+    min-width: 40%;
+    background: none;
+    color: #ffffff;
+    border: 3px solid #E0ABAF;
+    border-right: none;
+}
+
+.city-input::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.city-input:focus {
+    outline: none;
+    background: none;
+}
+
+.city-input:focus::placeholder {
+    color: transparent;
+}
+
+.submit-button {
+    width: 100px;
+    background-color: transparent;
+    border: 3px solid #E0ABAF;
+    border-left: none;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.search-icon:hover {
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+}
+
+[class*="intro-text"] {
+    margin: 50px auto;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.intro-text-2 {
+    width: 40%;
+    font-weight: 400;
+}
+
+.intro-text-3 {
+    font-weight: 700;
+}
+
+.intro-text a {
+    text-decoration: none;
+    color: #E0ABAF;
+}
+
+.intro-text a:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-block: 40px 10px;
+    font-weight: 700;
+    font-size: 4.5rem;
+    color: #ffffff;
+}
+
+.weather-condition-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.weather-icon, .temp-heading {
+    text-align: center;
+    margin: 0;
+}
+
+.weather-icon {
+    height: 150px;
+}
+
+.temp-heading {
+    color: #E0ABAF;
+    font-size: 6rem;
+    font-weight: 400; 
+    text-shadow: 0 1px 0 black;
+}
+
+.weather-icon:first-child {
+    transform: scaleX(-1);
+}
+
+.weather-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 2.2rem;
+    font-weight: 100;
+    color: #ffffff;
+    text-shadow: 0 1px 0 black;
+}
+
+.information-grid {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    text-align: center;
+    margin: 60px auto;
+    padding-inline: 20px 22px;
+    border: 3px solid #ffffff;
+    border-block: none;
+    text-shadow: 0 1px 2px black;
+}
+
+.information-title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #E0ABAF
+}
+
+.information-text {
+    margin: 0;
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.error-message {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ee2b38;
+}
+
+/* Footer */
+
+footer {
+    padding: 15px;
+    background-color: #131313;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* About Page */
+
+#about-heading {
+    margin-top: 50px;
+}
+
+.about-link {
+    text-decoration: none;
+    color: #E0ABAF;
+}
+
+.about-link:hover {
+    opacity:  0.5;
+    transition: 0.2s ease-in-out;
+}
+
+#wallpaper-link {
+    text-decoration: none;
+    color: #E0ABAF;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.active {
+    color: #E0ABAF;
+}
+
+/* Media Queries */
+
+@media (max-width: 1400px) {
+    .intro-text-2 {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1000px) {
+    h2 {
+        margin-bottom: 0;
+    }
+
+    [class*="intro-text"] {
+        width: 75%;
+    }
+
+    .information-grid {
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    ul {
+        gap: 120px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .city-input {
+        width: 70%;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    .temp-heading {
+        font-size: 4.5rem;
+    }
+
+    .weather-desc {
+        font-size: 1.8rem;
+    }
+
+    .weather-icon {
+        height: 140px;
+    }
+
+    .information-grid {
+        display: block;
+        margin: 10px auto;
+        border: none;
+    }
+
+    span {
+        margin: 25px;
+        display: block;
+    }
+
+    span:last-child {
+        margin-bottom: 50px;
+    }
+
+    .information-title, .information-text {
+        display: inline;
+        font-size: 1.5rem;
+    }
+
+    .intro-text-2 {
+        font-size: 1.5rem;
+    }
+
+    .error-message {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    ul {
+        gap: 100px;
+    }
+
+    .city-input {
+        font-size: 1.3rem;
+    }
+
+    .search-icon {
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro-text-2 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    ul {
+        gap: 80px;
+    }
+
+    .nav-link {
+        font-size: 1.4rem;
+    }
+
+    [class*="intro-text"] {
+        width: 80%;
+    }
+
+    .city-input::placeholder {
+        font-size: 1rem;
+    }
+
+    
+}
+
+@media (max-width: 420px) {
+    ul {
+        gap: 70px;
+    }
+
+    [class*="intro-text"] {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .city-input {
+        width: 60%;
+    }
+
+    span {
+        margin: 20px;
+    }
+    
+}

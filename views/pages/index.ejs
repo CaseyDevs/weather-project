@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <%- include('../partials/header') %>
+  <body>
+    <div class="main-container">
+      <fieldset>
+        <h1>Weather</h1>
+        <form action="/" method="post" autocomplete="off">
+          <input
+            type="text"
+            name="city"
+            class="city-input"
+            placeholder="Enter a Location: e.g. London"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="submit-button">
+            <i class="fa-sharp fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+        </form>
+
+        <% if (weather == null) { %>
+        <p class="intro-text">
+          Search a location and let the
+          <a href="https://openweathermap.org/" target="_blank"
+            >openweathermap</a
+          >
+          API work its magic!
+        </p>
+        <% } %> <%if( weather !== null){ %>
+        <div>
+          <h2 class="city-name"><%= place %></h2>
+        </div>
+        <div class="weather-condition-grid">
+          <img src="<%= icon %>" alt="Weather Icon" class="weather-icon" />
+          <h3 class="temp-heading"><%= temp %></h3>
+          <img src="<%= icon %>" alt="Weather Icon" class="weather-icon" />
+        </div>
+
+        <p class="weather-desc"><%= description %></p>
+
+        <div class="information-grid">
+          <span>
+            <h4 class="information-title">Coverage:</h4>
+            <p class="information-text"><%= clouds %></p>
+          </span>
+          <span>
+            <h4 class="information-title">Visibility:</h4>
+            <p class="information-text"><%= visibility %></p>
+          </span>
+          <span>
+            <h4 class="information-title">Humidity:</h4>
+            <p class="information-text"><%= humidity %> g.m-3</p>
+          </span>
+          <span>
+            <h4 class="information-title">Pressure:</h4>
+            <p class="information-text"><%= pressure %> N·m−2</p>
+          </span>
+        </div>
+        <% } %> <% if(error !== null){ %>
+        <p class="error-message"><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
