@@ -11,7 +11,7 @@ require("dotenv").config()
 // Limit request to 1 second per request
 const limiter = rateLimit({
 	windowMs: 1000, // 1 second
-	max: 1, // limit each IP to 1 requests per windowMs
+	max: 2, // limit each IP to 1 requests per windowMs
 })
 
 // Use public directory to server static pages, acting as root directory
@@ -42,6 +42,7 @@ app.get("/about", (req, res) => {
 
 app.post("/", (req, res) => {  
     const city = req.body.city // Get city name passed from form input
+
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.API_KEY}`
 
     // *** Request data from the API ***
