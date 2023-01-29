@@ -2,7 +2,9 @@
   <p class="footer-text">
     Copyright &copy; Casey Page -
     <script>
-      document.write(new Date().getFullYear());
+      let footerText = document.querySelector('.footer-text');
+      footerText.innerHTML =
+        footerText.innerHTML + `${new Date().getFullYear()}`;
     </script>
   </p>
 </footer>
